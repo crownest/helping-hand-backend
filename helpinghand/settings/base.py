@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-# Standart Library
+# Standard Library
 import os
 import sys
 
@@ -30,7 +30,6 @@ sys.path.append(PACKAGE_ROOT + '/apps')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,6 +46,7 @@ INSTALLED_APPS = [
 
     # Internal Applications
     'core',
+    'users',
     'categories',
 ]
 
@@ -79,6 +79,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'helpinghand.wsgi.application'
+
+
+# Overrides default User model with custom
+
+AUTH_USER_MODEL = 'users.User'
 
 
 # Internationalization
