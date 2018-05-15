@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 08:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: helpinghand/apps/core/apps.py:8
+msgid "Core"
+msgstr "Temel"
+
+#: helpinghand/apps/core/models.py:8
+msgid "Create Date"
+msgstr "Oluşturulma Tarihi"
+
+#: helpinghand/apps/core/models.py:11
+msgid "Update Date"
+msgstr "Güncellenme Tarihi"
+
+#: helpinghand/templates/admin/base_site.html:19
+msgid "View docs"
+msgstr "Dokümantasyonu Görüntüle"
+
+#: helpinghand/templates/admin/base_site.html:32
+#: helpinghand/templates/index.html:34
+msgid "Helping Hand is a Crownest product."
+msgstr "Helping Hand bir Crownest ürünüdür."
+
+#: helpinghand/templates/index.html:18
+msgid "Documentation"
+msgstr "Dokümantasyon"
+
+#: helpinghand/templates/index.html:23
+msgid "Admin Panel"
+msgstr "Yönetici Paneli"
+
+#: helpinghand/views.py:24
+msgid "Index"
+msgstr "Giriş"

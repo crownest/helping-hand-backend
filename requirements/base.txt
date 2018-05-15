@@ -1,0 +1,15 @@
+# Base
+Django==1.11.3
+# pytz==2018.4
+
+
+# Documentation
+mkdocs==0.17.2
+# Jinja2==2.10
+# Markdown==2.6.9
+# MarkupSafe==1.0
+# PyYAML==3.12
+# click==6.7
+# livereload==2.5.1
+# six==1.11.0
+# tornado==4.5.2
