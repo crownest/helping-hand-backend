@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     # External Applications
 
     # Internal Applications
+    'core',
+    'categories',
 ]
 
 MIDDLEWARE = [
