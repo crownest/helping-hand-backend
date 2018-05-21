@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 08:38+0000\n"
+"POT-Creation-Date: 2018-05-21 09:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: helpinghand/apps/categories/apps.py:8
+#: helpinghand/apps/categories/models.py:10
+msgid "Name"
+msgstr "Ad"
+
+#: helpinghand/apps/categories/models.py:13
+msgid "Category"
+msgstr "Kategori"
+
+#: helpinghand/apps/categories/models.py:14
+msgid "Categories"
+msgstr "Kategoriler"
 
 #: helpinghand/apps/core/apps.py:8
 msgid "Core"
@@ -29,6 +42,58 @@ msgstr "Oluşturulma Tarihi"
 #: helpinghand/apps/core/models.py:11
 msgid "Update Date"
 msgstr "Güncellenme Tarihi"
+
+#: helpinghand/apps/users/admin.py:13
+msgid "Base"
+msgstr "Temel"
+
+#: helpinghand/apps/users/admin.py:16
+msgid "Personal info"
+msgstr "Kişisel bilgi"
+
+#: helpinghand/apps/users/admin.py:19
+msgid "Permissions"
+msgstr "İzinler"
+
+#: helpinghand/apps/users/admin.py:25
+msgid "Important dates"
+msgstr "Önemli tarihler"
+
+#: helpinghand/apps/users/apps.py:8 helpinghand/apps/users/models.py:34
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#: helpinghand/apps/users/models.py:16
+msgid "Email"
+msgstr "E-posta"
+
+#: helpinghand/apps/users/models.py:18
+msgid "First Name"
+msgstr "İsim"
+
+#: helpinghand/apps/users/models.py:19
+msgid "Last Name"
+msgstr "Soyisim"
+
+#: helpinghand/apps/users/models.py:20
+msgid "Password"
+msgstr "Parola"
+
+#: helpinghand/apps/users/models.py:23
+msgid "Active"
+msgstr "Aktif"
+
+#: helpinghand/apps/users/models.py:24
+msgid "Staff"
+msgstr "Personel"
+
+#: helpinghand/apps/users/models.py:25
+msgid "Verified"
+msgstr "Doğrulanmış"
+
+#: helpinghand/apps/users/models.py:33
+msgid "User"
+msgstr "Kullanıcı"
 
 #: helpinghand/templates/admin/base_site.html:19
 msgid "View docs"
