@@ -24,3 +24,20 @@ class Need(DateModel):
 
     def __str__(self):
         return '{title}'.format(title=self.title)
+
+
+class NeedItem(DateModel):
+    name = models.CharField(verbose_name=_('Name'), max_length=254)
+    is_fixed = models.BooleanField(verbose_name=_('Is Fixed'), default=False)
+    need = models.ForeignKey(
+        verbose_name=_('Need'), to='needs.Need',
+        related_name='need_items', on_delete=models.CASCADE
+    )
+
+    class Meta:
+        verbose_name = _('Need Item')
+        verbose_name_plural = _('Need Items')
+        unique_together = (('name', 'need'),)
+
+    def __str__(self):
+        return '{name}'.format(name=self.name)
