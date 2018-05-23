@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 09:51+0000\n"
+"POT-Creation-Date: 2018-05-23 10:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: helpinghand/apps/categories/apps.py:8
-#: helpinghand/apps/categories/models.py:10
+#: helpinghand/apps/categories/models.py:10 helpinghand/apps/needs/models.py:30
 msgid "Name"
 msgstr "Ad"
 
@@ -42,6 +42,50 @@ msgstr "Oluşturulma Tarihi"
 #: helpinghand/apps/core/models.py:11
 msgid "Update Date"
 msgstr "Güncellenme Tarihi"
+
+#: helpinghand/apps/needs/apps.py:8 helpinghand/apps/needs/models.py:23
+msgid "Needs"
+msgstr "İhtiyaçlar"
+
+#: helpinghand/apps/needs/models.py:11
+msgid "Title"
+msgstr "Başlık"
+
+#: helpinghand/apps/needs/models.py:12
+msgid "Description"
+msgstr "Açıklama"
+
+#: helpinghand/apps/needs/models.py:13
+msgid "Address"
+msgstr "Adres"
+
+#: helpinghand/apps/needs/models.py:14
+msgid "End Date"
+msgstr "Bitiş Tarihi"
+
+#: helpinghand/apps/needs/models.py:15 helpinghand/apps/needs/models.py:31
+msgid "Is Fixed"
+msgstr "Çözüldü"
+
+#: helpinghand/apps/needs/models.py:17
+msgid "Creator"
+msgstr "Oluşturan"
+
+#: helpinghand/apps/needs/models.py:19
+msgid "Supporters"
+msgstr "Destekçiler"
+
+#: helpinghand/apps/needs/models.py:22 helpinghand/apps/needs/models.py:33
+msgid "Need"
+msgstr "İhtiyaç"
+
+#: helpinghand/apps/needs/models.py:38
+msgid "Need Item"
+msgstr "İhtiyaç Maddesi"
+
+#: helpinghand/apps/needs/models.py:39
+msgid "Need Items"
+msgstr "İhtiyaç Maddeleri"
 
 #: helpinghand/apps/users/admin.py:13
 msgid "Base"
