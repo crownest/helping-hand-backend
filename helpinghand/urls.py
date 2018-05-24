@@ -34,6 +34,9 @@ urlpatterns = [
     # Documentation
     url(r'^docs/$', DocumentationView.as_view(), name='docs'),
     url(r'^docs/(?P<path>.*)$', DocumentationView.as_view(), name='docs'),
+
+    # Api
+    url(r'^api/', include('helpinghand.api_urls')),
 ]
 
 

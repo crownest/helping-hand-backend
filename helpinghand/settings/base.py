@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'helpinghand',
 
     # External Applications
+    'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
 
     # Internal Applications
     'core',

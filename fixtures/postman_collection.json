@@ -1,0 +1,124 @@
+{
+	"id": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+	"name": "helping-hand-backend",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "Local",
+			"description": "",
+			"collectionId": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+			"order": [
+				"8e38dd8a-10fa-66c3-d9ba-0bba00406aa8"
+			],
+			"owner": 0,
+			"folder": "391405f9-dabd-8cb7-5d3c-1a49f0733025",
+			"folders_order": [],
+			"id": "806d7d13-fecb-cc56-a19c-4ee44a7ceacc"
+		},
+		{
+			"name": "Staging",
+			"description": "",
+			"collectionId": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+			"order": [
+				"588e30c8-f84f-17e5-c0e4-f5bb15f64596"
+			],
+			"owner": 0,
+			"folder": "391405f9-dabd-8cb7-5d3c-1a49f0733025",
+			"folders_order": [],
+			"id": "39593568-14cf-06d4-0791-8d57147c600a"
+		},
+		{
+			"name": "v1",
+			"description": "",
+			"collectionId": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+			"order": [],
+			"owner": 0,
+			"folders_order": [
+				"806d7d13-fecb-cc56-a19c-4ee44a7ceacc",
+				"39593568-14cf-06d4-0791-8d57147c600a"
+			],
+			"id": "391405f9-dabd-8cb7-5d3c-1a49f0733025"
+		}
+	],
+	"folders_order": [
+		"391405f9-dabd-8cb7-5d3c-1a49f0733025"
+	],
+	"timestamp": 1527198415963,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "588e30c8-f84f-17e5-c0e4-f5bb15f64596",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://api.helpinghand.unicrow.com/api/v1/auth/login/",
+			"folder": "39593568-14cf-06d4-0791-8d57147c600a",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1527199244919,
+			"name": "Auth Login",
+			"description": "",
+			"collectionId": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"crownest@unicrow.com\",\n\t\"password\": \"helping\"\n}"
+		},
+		{
+			"id": "8e38dd8a-10fa-66c3-d9ba-0bba00406aa8",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/v1/auth/login/",
+			"folder": "806d7d13-fecb-cc56-a19c-4ee44a7ceacc",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1527199231325,
+			"name": "Auth Login",
+			"description": "",
+			"collectionId": "d97dcbf0-9fef-c1fb-7eef-4d5e36ce6254",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"crownest@unicrow.com\",\n\t\"password\": \"helping\"\n}"
+		}
+	]
+}

@@ -1,0 +1,390 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add User",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change User",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete User",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add Category",
+    "content_type": 7,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change Category",
+    "content_type": 7,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete Category",
+    "content_type": 7,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add Need",
+    "content_type": 8,
+    "codename": "add_need"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change Need",
+    "content_type": 8,
+    "codename": "change_need"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete Need",
+    "content_type": 8,
+    "codename": "delete_need"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Need Item",
+    "content_type": 9,
+    "codename": "add_needitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Need Item",
+    "content_type": 9,
+    "codename": "change_needitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Need Item",
+    "content_type": 9,
+    "codename": "delete_needitem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3jzgcaf05fq13lzyvuncrmrpn80z2wi5",
+  "fields": {
+    "session_data": "YjNmMzE3MTc5ODE0YjUwNjg1NmY5MzY1N2MyODA0YmI3MDRmZTUyMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MTMzYTQyNzYyNTRjZWVkOGZkYzAzZDliODQxNTI2NDZjNzBhYmU5In0=",
+    "expire_date": "2018-06-07T21:51:21.070Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "last_login": "2018-05-24T21:51:21.068Z",
+    "is_superuser": true,
+    "create_date": "2018-05-24T21:50:43.807Z",
+    "update_date": "2018-05-24T21:50:43.807Z",
+    "email": "crownest@unicrow.com",
+    "first_name": "Crownest",
+    "last_name": "Apps",
+    "password": "pbkdf2_sha256$36000$NyzCQw0j0yu0$p6mVmKYrdncJUTXQf2/rBMfDKsH8UZhlHwRNe7tIKqQ=",
+    "is_active": true,
+    "is_staff": true,
+    "is_verified": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 1,
+  "fields": {
+    "create_date": "2018-05-24T21:57:44.239Z",
+    "update_date": "2018-05-24T21:57:44.239Z",
+    "name": "E\u011fitim"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 2,
+  "fields": {
+    "create_date": "2018-05-24T21:57:47.927Z",
+    "update_date": "2018-05-24T21:57:47.927Z",
+    "name": "Sa\u011fl\u0131k"
+  }
+},
+{
+  "model": "needs.need",
+  "pk": 1,
+  "fields": {
+    "create_date": "2018-05-24T21:54:52.022Z",
+    "update_date": "2018-05-24T21:54:52.022Z",
+    "title": "Sokak Hayvanlar\u0131 \u0130\u00e7in Kuru ve Ya\u015f Mama \u0130htiyac\u0131",
+    "description": "Her g\u00fcn sabah ve ak\u015fam sokak beslemesi yap\u0131yorum. 10 kadar kediyle \u00e7\u0131kt\u0131\u011f\u0131m bu yolda \u015fu an 20 civar\u0131 besleme noktas\u0131,130 kadar kedi ve 10-15 tane k\u00f6pek var.Sokak canlar\u0131n\u0131n a\u00e7 kalmamas\u0131 i\u00e7in kuru mama ve konserve mama deste\u011fine ihtiyac\u0131m\u0131z var.",
+    "address": "Hac\u0131kara Mahallesi",
+    "end_date": "2018-06-30",
+    "is_fixed": false,
+    "creator": 1,
+    "supporters": [
+      1
+    ]
+  }
+},
+{
+  "model": "needs.needitem",
+  "pk": 1,
+  "fields": {
+    "create_date": "2018-05-24T21:54:52.028Z",
+    "update_date": "2018-05-24T21:54:52.028Z",
+    "name": "60 Kilogram Kedi kuru mama",
+    "is_fixed": false,
+    "need": 1
+  }
+},
+{
+  "model": "needs.needitem",
+  "pk": 2,
+  "fields": {
+    "create_date": "2018-05-24T21:54:52.029Z",
+    "update_date": "2018-05-24T21:54:52.029Z",
+    "name": "30 Adet Kedi ya\u015f mama",
+    "is_fixed": false,
+    "need": 1
+  }
+},
+{
+  "model": "needs.needitem",
+  "pk": 3,
+  "fields": {
+    "create_date": "2018-05-24T21:54:52.029Z",
+    "update_date": "2018-05-24T21:54:52.029Z",
+    "name": "15 Kilogram K\u00f6pek kuru mama",
+    "is_fixed": false,
+    "need": 1
+  }
+},
+{
+  "model": "needs.needitem",
+  "pk": 4,
+  "fields": {
+    "create_date": "2018-05-24T21:54:52.030Z",
+    "update_date": "2018-05-24T21:54:52.030Z",
+    "name": "15 Adet K\u00f6pek ya\u015f mama",
+    "is_fixed": false,
+    "need": 1
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2018-05-24T21:54:52.030Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Sokak Hayvanlar\u0131 \u0130\u00e7in Kuru ve Ya\u015f Mama \u0130htiyac\u0131",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Need Item\", \"object\": \"60 Kilogram Kedi kuru mama\"}}, {\"added\": {\"name\": \"Need Item\", \"object\": \"30 Adet Kedi ya\\u015f mama\"}}, {\"added\": {\"name\": \"Need Item\", \"object\": \"15 Kilogram K\\u00f6pek kuru mama\"}}, {\"added\": {\"name\": \"Need Item\", \"object\": \"15 Adet K\\u00f6pek ya\\u015f mama\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2018-05-24T21:57:44.240Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "E\u011fitim",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2018-05-24T21:57:47.928Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Sa\u011fl\u0131k",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

@@ -65,6 +65,16 @@ pip install -r requirements/extra.txt
 ./manage.py migrate
 ```
 
+**Load initial data**
+```bash
+./manage.py loaddata fixtures/initial_data.json
+```
+
+**Run test**
+```bash
+./manage.py test helpinghand.apps -v 2
+```
+
 **Language**
 ```bash
 ./manage.py compilemessages

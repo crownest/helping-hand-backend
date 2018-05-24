@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 #Local Django
 from core.models import DateModel
-from users.managers import CustomUserManager
+from users.managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin, DateModel):
@@ -24,7 +24,7 @@ class User(AbstractBaseUser, PermissionsMixin, DateModel):
     is_staff = models.BooleanField(verbose_name=_('Staff'), default=False)
     is_verified = models.BooleanField(verbose_name=_('Verified'), default=False)
 
-    objects = CustomUserManager()
+    objects = UserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name']
