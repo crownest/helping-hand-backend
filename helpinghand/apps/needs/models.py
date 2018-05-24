@@ -4,19 +4,31 @@ from django.utils.translation import ugettext_lazy as _
 
 # Local Django
 from core.models import DateModel
-from users.models import User
 
 
 class Need(DateModel):
+    # Base
     title = models.CharField(verbose_name=_('Title'), max_length=254)
     description = models.TextField(verbose_name=_('Description'))
+
+    # Detail
     address = models.TextField(verbose_name=_('Address'))
     end_date = models.DateField(verbose_name=_('End Date'))
     is_fixed = models.BooleanField(verbose_name=_('Is Fixed'), default=False)
+
+    # Relations
     creator = models.ForeignKey(
-        verbose_name=_('Creator'), to=User, related_name='creator_needs', on_delete=models.CASCADE
+        verbose_name=_('Creator'), to='users.User',
+        related_name='creator_needs', on_delete=models.CASCADE
     )
-    supporters = models.ManyToManyField(verbose_name=_('Supporters'), to=User, related_name='supporter_needs')
+    categories = models.ManyToManyField(
+        verbose_name=_('Categories'), to='categories.Category',
+        related_name='needs', blank=True
+    )
+    supporters = models.ManyToManyField(
+        verbose_name=_('Supporters'), to='users.User',
+        related_name='supporter_needs', blank=True
+    )
 
     class Meta:
         verbose_name = _('Need')
@@ -27,8 +39,16 @@ class Need(DateModel):
 
 
 class NeedItem(DateModel):
+    # Base
     name = models.CharField(verbose_name=_('Name'), max_length=254)
+
+    # Detail
+    remaining = models.CharField(
+        verbose_name=_('Remaining'), max_length=254, blank=True
+    )
     is_fixed = models.BooleanField(verbose_name=_('Is Fixed'), default=False)
+
+    # Relations
     need = models.ForeignKey(
         verbose_name=_('Need'), to='needs.Need',
         related_name='need_items', on_delete=models.CASCADE

@@ -23,6 +23,7 @@ class UserAdmin(_UserAdmin):
             )
         }),
         (_('Important dates'), {
+            'classes': ('collapse',),
             'fields': ('last_login', 'create_date', 'update_date')
         }),
     )
