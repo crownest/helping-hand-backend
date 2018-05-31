@@ -8,6 +8,7 @@ from rest_framework.authtoken.models import Token
 # Local Django
 from users.models import User
 from needs.models import Need
+from categories.models import Category
 
 
 class NeedAPITestCase(APITestCase):
@@ -23,20 +24,26 @@ class NeedAPITestCase(APITestCase):
         # Token Authentication
         self.api_authentication()
 
-        # Create Need
-        self.need = Need.objects.create(
-            title='Need shoes', description='In need of shoes for my son.', address='Prins Bernhardstraat 13',
-            end_date=datetime.datetime.strptime(self.date_str, '%Y-%m-%dT%H:%M:%S'),
-            is_fixed=False, creator=self.user, categories='Clothing', supporters=''
-        )
-
-        # Create Dummy Data
+        # Test date
         self.date = datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
-        self.date_str = self.date.strftime('%Y-%m-%dT%H:%M:%S')
-        self.dummy_data = {
-            'need': self.need.id,
-            'date': self.date_str
-        }
+
+        # Create Category
+        self.category = Category(name='Clothing')
+        self.category.save()
+
+        # Create Need
+        self.need = Need
+        self.title = 'Need shoes'
+        self.description = 'In need of shoes for my son.'
+        self.address = 'Prins Bernhardstraat 13'
+        self.end_date = self.date
+        self.is_fixed = False
+        self.creator = self.need.creator.add(self.user)
+        self.categories = self.need.categories.add(self.category)
+        self.supporters = self.need.supporters.add(self.user)
+        self.need(title=self.title, description=self.description, address=self.address,end_date=self.end_date,
+                  is_fixed=self.is_fixed, creator=self.creator, categories=self.categories, supporters=self.supporters)
+        self.need.save()
 
     def api_authentication(self):
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)

@@ -3,9 +3,7 @@ from rest_framework import viewsets, mixins
 
 # Local Django
 from needs.models import Need
-from needs.serializers import (
-    NeedSerializer, NeedListSerializer
-)
+from needs.serializers import NeedSerializer, NeedListSerializer
 
 
 class NeedViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -17,3 +15,6 @@ class NeedViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     def get_serializer_class(self):
         if self.action == 'list':
             return NeedListSerializer
+        else:
+            return NeedSerializer
+

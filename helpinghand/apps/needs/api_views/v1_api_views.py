@@ -10,3 +10,5 @@ class NeedViewSetV1(NeedViewSet):
     def get_serializer_class(self):
         if self.action == 'list':
             return NeedListSerializerV1
+        else:
+            return NeedSerializer
