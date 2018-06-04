@@ -14,7 +14,7 @@ from .base_tests import NeedAPITestCase
 class NeedAPITestCaseV1(NeedAPITestCase):
 
     def test_list_need(self):
-        url = reverse('v1:need-list')
+        url = reverse('v1:needs-list')
 
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

@@ -32,19 +32,16 @@ class NeedAPITestCase(APITestCase):
         self.category.save()
 
         # Create Need
-        self.need = Need
         self.title = 'Need shoes'
+        self.is_fixed = True
         self.description = 'In need of shoes for my son.'
         self.address = 'Prins Bernhardstraat 13'
-        self.end_date = self.date
-        self.is_fixed = False
-        self.creator = self.need.creator.add(self.user)
-        self.categories = self.need.categories.add(self.category)
-        self.supporters = self.need.supporters.add(self.user)
-        self.need(title=self.title, description=self.description, address=self.address,end_date=self.end_date,
-                  is_fixed=self.is_fixed, creator=self.creator, categories=self.categories, supporters=self.supporters)
+        self.need = Need(title=self.title, description=self.description, address=self.address,
+                         end_date=self.date, is_fixed=self.is_fixed, creator=self.user,
+                         )
         self.need.save()
+        self.need.categories.add(self.category)
+        self.need.supporters.add(self.user)
 
     def api_authentication(self):
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-

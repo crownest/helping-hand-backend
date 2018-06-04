@@ -14,8 +14,8 @@ class NeedSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Need
-        fields = ('id', 'title', 'description', 'address', 'end_date',
-                  'is_fixed', 'creator', 'categories', 'supporters'
+        fields = ('id', 'title', 'description', 'address',
+                  'end_date', 'is_fixed', 'creator', 'categories', 'supporters'
                   )
 
 
