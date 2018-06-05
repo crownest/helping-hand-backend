@@ -5,10 +5,14 @@ from rest_framework import serializers
 from django.utils.translation import ugettext_lazy as _
 
 # Local Django
-from needs.models import Need
+from needs.models import Need, NeedItem
+from users.serializers import UserListSerializer
+from categories.serializers import CategoryListSerializer
 
 
 class NeedSerializer(serializers.ModelSerializer):
+    supporters = UserListSerializer(many=True, read_only=True)
+    categories = CategoryListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Need
@@ -47,3 +51,19 @@ class NeedUpdateSerializer(NeedSerializer):
             raise serializers.ValidationError(_('Can not select same reminder.'))
 
         return value
+
+
+class NeedItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NeedItem
+        fields = ('id', 'name', 'remaining', 'is_fixed', 'need')
+
+
+class NeedItemListSerializer(NeedItemSerializer):
+    pass
+
+
+class NeedItemCreateSerializer(NeedItemSerializer):
+    class Meta:
+        model = NeedItem
+        fields = ('id', 'name', 'remaining', 'is_fixed', 'need')

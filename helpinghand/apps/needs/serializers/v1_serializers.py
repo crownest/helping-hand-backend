@@ -1,13 +1,13 @@
 # Local Django
 from .base_serializers import (
     NeedListSerializer, NeedCreateSerializer,
-    NeedRetrieveSerializer, NeedUpdateSerializer
+    NeedRetrieveSerializer, NeedUpdateSerializer, NeedItemListSerializer,
+    NeedItemCreateSerializer,
 )
-from needs.models import Need
+from needs.models import Need, NeedItem
 
 
 class NeedListSerializerV1(NeedListSerializer):
-
     class Meta:
         model = Need
         fields = ('id', 'title', 'description', 'address',
@@ -24,4 +24,12 @@ class NeedRetrieveSerializerV1(NeedRetrieveSerializer):
 
 
 class NeedUpdateSerializerV1(NeedUpdateSerializer):
+    pass
+
+
+class NeedItemListSerializerV1(NeedItemListSerializer):
+    pass
+
+
+class NeedItemCreateSerializerV1(NeedItemCreateSerializer):
     pass
