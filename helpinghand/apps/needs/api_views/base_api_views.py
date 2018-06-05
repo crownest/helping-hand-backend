@@ -1,13 +1,20 @@
 # Third-Party
-from rest_framework import viewsets, mixins
+from rest_framework import viewsets, mixins, permissions
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 
 # Local Django
 from needs.models import Need
-from needs.serializers import NeedSerializer, NeedListSerializer
+from needs.serializers import (
+    NeedSerializer, NeedListSerializer, NeedCreateSerializer
+)
 
 
-class NeedViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+class NeedViewSet(mixins.ListModelMixin,
+                  mixins.CreateModelMixin,
+                  viewsets.GenericViewSet):
     queryset = Need.objects.all()
+    permission_classes = (permissions.AllowAny,)
 
     def get_queryset(self):
         return self.queryset.all()
@@ -15,6 +22,12 @@ class NeedViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     def get_serializer_class(self):
         if self.action == 'list':
             return NeedListSerializer
+        elif self.action == 'create':
+            return NeedCreateSerializer
         else:
             return NeedSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(
+            creator=self.request.user
+        )
