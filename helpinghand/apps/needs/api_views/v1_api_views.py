@@ -5,7 +5,7 @@ from needs.serializers import (
     NeedCreateSerializerV1, NeedRetrieveSerializerV1,
     NeedUpdateSerializerV1, NeedItemSerializer,
     NeedItemListSerializerV1, NeedItemCreateSerializerV1,
-    NeedItemUpdateSerializerV1,
+    NeedItemUpdateSerializerV1, NeedItemRetrieveSerializerV1,
 )
 
 
@@ -31,6 +31,8 @@ class NeedItemViewSetV1(NeedItemViewSet):
             return NeedItemListSerializerV1
         elif self.action == 'create':
             return NeedItemCreateSerializerV1
+        elif self.action == 'retrieve':
+            return NeedItemRetrieveSerializerV1
         elif self.action == 'update':
             return NeedItemUpdateSerializerV1
         else:

@@ -4,11 +4,11 @@ from .base_serializers import (
     NeedCreateSerializer, NeedRetrieveSerializer,
     NeedUpdateSerializer, NeedItemSerializer,
     NeedItemListSerializer, NeedItemCreateSerializer,
-    NeedItemUpdateSerializer,
+    NeedItemUpdateSerializer, NeedItemRetrieveSerializer,
 )
 from .v1_serializers import (
     NeedListSerializerV1, NeedCreateSerializerV1,
     NeedRetrieveSerializerV1, NeedUpdateSerializerV1,
     NeedItemListSerializerV1, NeedItemCreateSerializerV1,
-    NeedItemUpdateSerializerV1,
+    NeedItemUpdateSerializerV1, NeedItemRetrieveSerializerV1,
 )

@@ -69,5 +69,9 @@ class NeedItemCreateSerializer(NeedItemSerializer):
         fields = ('id', 'name', 'remaining', 'is_fixed', 'need')
 
 
+class NeedItemRetrieveSerializer(NeedItemSerializer):
+    pass
+
+
 class NeedItemUpdateSerializer(NeedItemSerializer):
     pass

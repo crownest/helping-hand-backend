@@ -9,6 +9,7 @@ from needs.serializers import (
     NeedSerializer, NeedListSerializer, NeedCreateSerializer,
     NeedRetrieveSerializer, NeedUpdateSerializer, NeedItemSerializer,
     NeedItemListSerializer, NeedItemCreateSerializer, NeedItemUpdateSerializer,
+    NeedItemRetrieveSerializer
 )
 
 
@@ -52,7 +53,9 @@ class NeedViewSet(mixins.ListModelMixin,
 
 class NeedItemViewSet(mixins.ListModelMixin,
                       mixins.CreateModelMixin,
+                      mixins.RetrieveModelMixin,
                       mixins.UpdateModelMixin,
+                      mixins.DestroyModelMixin,
                       viewsets.GenericViewSet):
     queryset = NeedItem.objects.all()
 
@@ -64,7 +67,12 @@ class NeedItemViewSet(mixins.ListModelMixin,
             return NeedItemListSerializer
         elif self.action == 'create':
             return NeedItemCreateSerializer
+        elif self.action == 'retrieve':
+            return NeedItemRetrieveSerializer
         elif self.action == 'update':
             return NeedItemUpdateSerializer
         else:
             return NeedItemSerializer
+
+    def perform_destroy(self, instance):
+        super(NeedItemViewSet, self).perform_destroy(instance)

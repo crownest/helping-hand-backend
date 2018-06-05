@@ -2,7 +2,7 @@
 from .base_serializers import (
     NeedListSerializer, NeedCreateSerializer,
     NeedRetrieveSerializer, NeedUpdateSerializer, NeedItemListSerializer,
-    NeedItemCreateSerializer, NeedItemUpdateSerializer,
+    NeedItemCreateSerializer, NeedItemUpdateSerializer, NeedItemRetrieveSerializer,
 )
 from needs.models import Need, NeedItem
 
@@ -32,6 +32,10 @@ class NeedItemListSerializerV1(NeedItemListSerializer):
 
 
 class NeedItemCreateSerializerV1(NeedItemCreateSerializer):
+    pass
+
+
+class NeedItemRetrieveSerializerV1(NeedItemRetrieveSerializer):
     pass
 
 
