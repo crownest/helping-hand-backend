@@ -7,13 +7,14 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 from needs.models import Need
 from needs.serializers import (
     NeedSerializer, NeedListSerializer, NeedCreateSerializer,
-    NeedRetrieveSerializer
+    NeedRetrieveSerializer, NeedUpdateSerializer,
 )
 
 
 class NeedViewSet(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
                   mixins.RetrieveModelMixin,
+                  mixins.UpdateModelMixin,
                   viewsets.GenericViewSet):
     queryset = Need.objects.all()
     permission_classes = (permissions.AllowAny,)
@@ -28,10 +29,17 @@ class NeedViewSet(mixins.ListModelMixin,
             return NeedCreateSerializer
         elif self.action == 'retrieve':
             return NeedRetrieveSerializer
+        elif self.action == 'update':
+            return NeedUpdateSerializer
         else:
             return NeedSerializer
 
     def perform_create(self, serializer):
+        serializer.save(
+            creator=self.request.user
+        )
+
+    def perform_update(self, serializer):
         serializer.save(
             creator=self.request.user
         )

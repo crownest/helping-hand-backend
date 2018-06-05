@@ -2,7 +2,8 @@
 from .base_api_views import NeedViewSet
 from needs.serializers import (
     NeedSerializer, NeedListSerializerV1,
-    NeedCreateSerializerV1, NeedRetrieveSerializerV1
+    NeedCreateSerializerV1, NeedRetrieveSerializerV1,
+    NeedUpdateSerializerV1,
 )
 
 
@@ -15,5 +16,7 @@ class NeedViewSetV1(NeedViewSet):
             return NeedCreateSerializerV1
         elif self.action == 'retrieve':
             return NeedRetrieveSerializerV1
+        elif self.action == 'update':
+            return NeedUpdateSerializerV1
         else:
             return NeedSerializer

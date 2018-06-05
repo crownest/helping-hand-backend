@@ -1,9 +1,8 @@
 # Local Django
 from .base_serializers import (
-    NeedListSerializer, NeedCreateSerializer, NeedRetrieveSerializer
+    NeedListSerializer, NeedCreateSerializer,
+    NeedRetrieveSerializer, NeedUpdateSerializer
 )
-from users.serializers import UserListSerializerV1
-from categories.serializers import CategoryListSerializerV1
 from needs.models import Need
 
 
@@ -21,4 +20,8 @@ class NeedCreateSerializerV1(NeedCreateSerializer):
 
 
 class NeedRetrieveSerializerV1(NeedRetrieveSerializer):
+    pass
+
+
+class NeedUpdateSerializerV1(NeedUpdateSerializer):
     pass
