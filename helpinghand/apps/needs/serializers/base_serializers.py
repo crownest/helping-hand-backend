@@ -27,3 +27,6 @@ class NeedCreateSerializer(NeedSerializer):
                   'end_date', 'is_fixed', 'categories', 'supporters'
                   )
 
+
+class NeedRetrieveSerializer(NeedSerializer):
+    pass

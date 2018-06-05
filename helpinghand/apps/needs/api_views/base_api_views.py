@@ -6,12 +6,14 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 # Local Django
 from needs.models import Need
 from needs.serializers import (
-    NeedSerializer, NeedListSerializer, NeedCreateSerializer
+    NeedSerializer, NeedListSerializer, NeedCreateSerializer,
+    NeedRetrieveSerializer
 )
 
 
 class NeedViewSet(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
+                  mixins.RetrieveModelMixin,
                   viewsets.GenericViewSet):
     queryset = Need.objects.all()
     permission_classes = (permissions.AllowAny,)
@@ -24,6 +26,8 @@ class NeedViewSet(mixins.ListModelMixin,
             return NeedListSerializer
         elif self.action == 'create':
             return NeedCreateSerializer
+        elif self.action == 'retrieve':
+            return NeedRetrieveSerializer
         else:
             return NeedSerializer
 
