@@ -15,6 +15,7 @@ class NeedViewSet(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
                   mixins.RetrieveModelMixin,
                   mixins.UpdateModelMixin,
+                  mixins.DestroyModelMixin,
                   viewsets.GenericViewSet):
     queryset = Need.objects.all()
     permission_classes = (permissions.AllowAny,)
@@ -43,3 +44,6 @@ class NeedViewSet(mixins.ListModelMixin,
         serializer.save(
             creator=self.request.user
         )
+
+    def perform_destroy(self, instance):
+        super(NeedViewSet, self).perform_destroy(instance)
