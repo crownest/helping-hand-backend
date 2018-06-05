@@ -8,7 +8,7 @@ from needs.models import Need, NeedItem
 from needs.serializers import (
     NeedSerializer, NeedListSerializer, NeedCreateSerializer,
     NeedRetrieveSerializer, NeedUpdateSerializer, NeedItemSerializer,
-    NeedItemListSerializer, NeedItemCreateSerializer
+    NeedItemListSerializer, NeedItemCreateSerializer, NeedItemUpdateSerializer,
 )
 
 
@@ -52,6 +52,7 @@ class NeedViewSet(mixins.ListModelMixin,
 
 class NeedItemViewSet(mixins.ListModelMixin,
                       mixins.CreateModelMixin,
+                      mixins.UpdateModelMixin,
                       viewsets.GenericViewSet):
     queryset = NeedItem.objects.all()
 
@@ -63,5 +64,7 @@ class NeedItemViewSet(mixins.ListModelMixin,
             return NeedItemListSerializer
         elif self.action == 'create':
             return NeedItemCreateSerializer
+        elif self.action == 'update':
+            return NeedItemUpdateSerializer
         else:
             return NeedItemSerializer

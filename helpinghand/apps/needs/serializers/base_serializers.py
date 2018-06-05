@@ -67,3 +67,7 @@ class NeedItemCreateSerializer(NeedItemSerializer):
     class Meta:
         model = NeedItem
         fields = ('id', 'name', 'remaining', 'is_fixed', 'need')
+
+
+class NeedItemUpdateSerializer(NeedItemSerializer):
+    pass
