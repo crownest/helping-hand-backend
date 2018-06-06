@@ -7,7 +7,7 @@ from core.models import DateModel
 
 
 class Need(DateModel):
-    # Base
+    #  Base
     title = models.CharField(verbose_name=_('Title'), max_length=254)
     description = models.TextField(verbose_name=_('Description'))
 
@@ -39,10 +39,10 @@ class Need(DateModel):
 
 
 class NeedItem(DateModel):
-    # Base
+    #  Base
     name = models.CharField(verbose_name=_('Name'), max_length=254)
 
-    # Detail
+    #  Detail
     remaining = models.CharField(
         verbose_name=_('Remaining'), max_length=254, blank=True
     )
