@@ -21,7 +21,8 @@ from django.views.static import serve
 from django.conf.urls import url, include
 
 # Local Django
-from helpinghand.views import DocumentationView, IndexView
+from helpinghand.views import DocumentationView, IndexView, ActivationView, ResetPasswordView
+from core.api_views import LoginView
 
 
 urlpatterns = [
@@ -37,6 +38,14 @@ urlpatterns = [
 
     # Api
     url(r'^api/', include('helpinghand.api_urls')),
+
+    # Token
+    url(r'^auth/login', LoginView.as_view(), name='login'),
+    url(r'^auth/', include('djoser.urls.authtoken')),
+
+    # Activation and Password Operations
+    url(r'^activation/(?P<key>\w+)/$', ActivationView.as_view(), name='activation'),
+    url(r'^reset-password/(?P<key>\w+)/$', ResetPasswordView.as_view(), name='reset-password')
 ]
 
 

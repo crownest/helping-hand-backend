@@ -5,9 +5,10 @@ from django.contrib.auth.models import (
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-#Local Django
+# Local Django
 from core.models import DateModel
 from users.managers import UserManager
+from helpinghand import settings
 
 
 class User(AbstractBaseUser, PermissionsMixin, DateModel):
@@ -43,3 +44,35 @@ class User(AbstractBaseUser, PermissionsMixin, DateModel):
 
     def get_short_name(self):
         return '{first_name}'.format(first_name=self.first_name)
+
+
+class ActivationKey(models.Model):
+    key = models.CharField(verbose_name=_('Key'), max_length=50, unique=True)
+    is_used = models.BooleanField(verbose_name=_('Used'), default=False)
+    user = models.ForeignKey(
+        verbose_name=_('User'),
+        to=settings.AUTH_USER_MODEL, related_name='activation_keys'
+    )
+
+    class Meta:
+        verbose_name = _('Activation Key')
+        verbose_name_plural = _('Activation Keys')
+
+    def __str__(self):
+        return '{key}'.format(key=self.key)
+
+
+class ResetPasswordKey(models.Model):
+    key = models.CharField(verbose_name=_('Key'), max_length=50, unique=True)
+    is_used = models.BooleanField(verbose_name=_('Used'), default=False)
+    user = models.ForeignKey(
+        verbose_name=_('User'),
+        to=settings.AUTH_USER_MODEL, related_name='reset_password_keys'
+    )
+
+    class Meta:
+        verbose_name = _('Reset Password Key')
+        verbose_name_plural = _('Reset Password Keys')
+
+    def __str__(self):
+        return '{key}'.format(key=self.key)

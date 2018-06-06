@@ -7,15 +7,17 @@ from django.conf.urls import url, include
 # Local Django
 from core.api_views import LoginViewV1
 from needs.api_views import NeedViewSetV1, NeedItemViewSetV1
+from users.api_views import UserViewSetV1
 
 
 # Router V1
 router_v1 = routers.DefaultRouter()
-
 LIST_V1 = [
     (r'needs', NeedViewSetV1, 'needs'),
-    (r'needitems', NeedItemViewSetV1, 'needitems')
+    (r'needitems', NeedItemViewSetV1, 'needitems'),
+    (r'users', UserViewSetV1, 'users'),
 ]
+
 
 for api in LIST_V1:
     router_v1.register(api[0], api[1], base_name=api[2])
