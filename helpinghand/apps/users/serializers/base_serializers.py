@@ -20,7 +20,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserListSerializer(UserSerializer):
-
     class Meta:
         model = User
         fields = ('id', 'email', 'first_name', 'last_name')

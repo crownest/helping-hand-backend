@@ -86,9 +86,9 @@ class MailModule(object):
                 "Helping Hand\n"
                 "Hello, {full_name}\n"
                 "Activate Your Account = {activation_url}\n").format(
-                    full_name=template_context.get('full_name', ''),
-                    activation_url=template_context.get('activation_url', '')
-                ),
+                full_name=template_context.get('full_name', ''),
+                activation_url=template_context.get('activation_url', '')
+            ),
             'html_message': render_to_string(
                 'mail/activation-mail.html', template_context
             ),
@@ -113,9 +113,9 @@ class MailModule(object):
                 "Helping Hand\n"
                 "Hello, {full_name}\n"
                 "Set New Password = {reset_password_url}\n").format(
-                    full_name=template_context.get('full_name', ''),
-                    reset_password_url=template_context.get('reset_password_url', '')
-                ),
+                full_name=template_context.get('full_name', ''),
+                reset_password_url=template_context.get('reset_password_url', '')
+            ),
             'html_message': render_to_string(
                 'mail/forgot-password-mail.html', template_context
             ),
@@ -140,9 +140,9 @@ class MailModule(object):
                 "Helping Hand\n"
                 "Hello, {full_name}\n"
                 "New Contact = {contact_url}\n").format(
-                    full_name=template_context.get('full_name', ''),
-                    contact_url=template_context.get('contact_url', '')
-                ),
+                full_name=template_context.get('full_name', ''),
+                contact_url=template_context.get('contact_url', '')
+            ),
             'html_message': render_to_string(
                 'mail/contact-mail.html', template_context
             ),

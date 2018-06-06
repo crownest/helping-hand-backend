@@ -4,6 +4,7 @@ from .base_serializers import (
     UserPasswordForgotSerializer, UserActivationResendSerializer
 )
 
+
 class UserListSerializerV1(UserListSerializer):
     pass
 

@@ -3,8 +3,6 @@ from rest_framework.response import Response
 from rest_framework import viewsets, mixins, status
 from rest_framework.decorators import detail_route, list_route
 
-# Django
-
 # Local Django
 from users.models import User
 from helpinghand.modules import ActivationKeyModule, MailModule, ResetPasswordKeyModule
