@@ -29,6 +29,13 @@ class Need(DateModel):
         verbose_name=_('Supporters'), to='users.User',
         related_name='supporter_needs', blank=True
     )
+    lat = models.DecimalField(
+        verbose_name=_('Latitude'), max_digits=9, decimal_places=6, blank=True
+    )
+
+    long = models.DecimalField(
+        verbose_name=_('Longitude'), max_digits=9, decimal_places=6, blank=True
+    )
 
     class Meta:
         verbose_name = _('Need')

@@ -22,7 +22,7 @@ class NeedAdmin(admin.ModelAdmin):
         }),
         (_('Detail'), {
             'fields': (
-                'address', 'end_date', 'creator', 'categories', 'supporters'
+                'address', 'end_date', 'creator', 'categories', 'supporters', 'lat', 'long'
             )
         }),
         (_('Important dates'), {
@@ -34,10 +34,10 @@ class NeedAdmin(admin.ModelAdmin):
     filter_horizontal = ('categories', 'supporters')
 
     list_display = (
-        'title', 'end_date', 'is_fixed', 'creator', 'create_date', 'update_date'
+        'title', 'end_date', 'is_fixed', 'creator', 'create_date', 'update_date', 'lat', 'long'
     )
     list_filter = (
-        'create_date', 'update_date', 'is_fixed', 'categories', 'supporters'
+        'create_date', 'update_date', 'is_fixed', 'categories', 'supporters', 'lat', 'long'
     )
     search_fields = ('title',)
 

@@ -29,7 +29,7 @@ class NeedCreateSerializer(NeedSerializer):
     class Meta:
         model = Need
         fields = ('id', 'title', 'description', 'address',
-                  'end_date', 'is_fixed', 'categories', 'supporters'
+                  'end_date', 'is_fixed', 'categories', 'supporters', 'lat', 'long'
                   )
 
 
@@ -41,7 +41,7 @@ class NeedUpdateSerializer(NeedSerializer):
     class Meta:
         model = Need
         fields = ('id', 'title', 'description', 'address',
-                  'end_date', 'is_fixed', 'categories', 'supporters'
+                  'end_date', 'is_fixed', 'categories', 'supporters', 'lat', 'long'
                   )
 
     def validate_date(self, value):
