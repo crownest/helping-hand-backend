@@ -11,7 +11,7 @@ class NeedListSerializerV1(NeedListSerializer):
     class Meta:
         model = Need
         fields = ('id', 'title', 'description', 'address',
-                  'end_date', 'is_fixed', 'categories', 'supporters'
+                  'end_date', 'is_fixed', 'categories', 'supporters', 'lat', 'long'
                   )
 
 
