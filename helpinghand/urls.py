@@ -20,22 +20,32 @@ from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url, include
 
-# Local Django
-from helpinghand.views import DocumentationView, IndexView
-
+#  Local Django
+from helpinghand.views import DocumentationView, IndexView, ActivationView, ResetPasswordView
+from core.api_views import LoginView
 
 urlpatterns = [
     # Landing
     url(r'^$', IndexView.as_view(), name='index'),
 
-    # Admin
+    #  Admin
     url(r'^admin/', admin.site.urls),
 
     # Documentation
     url(r'^docs/$', DocumentationView.as_view(), name='docs'),
     url(r'^docs/(?P<path>.*)$', DocumentationView.as_view(), name='docs'),
-]
 
+    #  Api
+    url(r'^api/', include('helpinghand.api_urls')),
+
+    # Token
+    url(r'^auth/login', LoginView.as_view(), name='login'),
+    url(r'^auth/', include('djoser.urls.authtoken')),
+
+    # Activation and Password Operations
+    url(r'^activation/(?P<key>\w+)/$', ActivationView.as_view(), name='activation'),
+    url(r'^reset-password/(?P<key>\w+)/$', ResetPasswordView.as_view(), name='reset-password')
+]
 
 # Media
 if settings.DEBUG:

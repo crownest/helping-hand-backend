@@ -1,5 +1,5 @@
 # Base
-Django==1.11.3
+Django==1.11.11
 # pytz==2018.4
 
 
@@ -13,3 +13,13 @@ mkdocs==0.17.2
 # livereload==2.5.1
 # six==1.11.0
 # tornado==4.5.2
+
+
+# Django Rest Framework
+djangorestframework==3.7.7
+django-filter==1.1.0
+
+
+# Djoser
+djoser==0.6.0
+# django-templated-mail==1.0.0
