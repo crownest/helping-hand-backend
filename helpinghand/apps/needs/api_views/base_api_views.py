@@ -60,7 +60,11 @@ class NeedItemViewSet(mixins.ListModelMixin,
     queryset = NeedItem.objects.all()
 
     def get_queryset(self):
-        return self.queryset.all()
+        filters = {}
+        if self.request.GET.get('need'):
+            filters['need'] = self.request.GET.get('need')
+
+        return self.queryset.filter(**filters)
 
     def get_serializer_class(self):
         if self.action == 'list':
